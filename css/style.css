@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #003844, #2d6f7e, #68a782);
+  font-family: "BioRhyme", serif;
+  overflow: hidden;
+}
+
+.main {
+  background-color: hsl(0, 0%, 100%);
+  margin: 5em 2em;
+  padding: 1em;
+  border-radius: 15px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+#title {
+  display: inline;
+  text-decoration: dashed;
+  text-decoration-line: underline;
+}
+
+.inputField {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 1em;
+  flex: 0.9;
+  font-family: "BioRhyme", serif;
+  font-size: medium;
+  color: #000000;
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 15px;
+}
+
+input::placeholder {
+  color: #222;
+}
+
+#add-btn {
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-family: "BioRhyme", serif;
+  font-size: medium;
+  font-weight: 700;
+  color: #000000;
+  background-color: hsl(85, 60%, 50%);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: hsl(85, 70%, 40%);
+}
+
+#listContent {
+  margin: 0px 11px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+ul li {
+  list-style: none;
+  font-size: medium;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: 600;
+  padding: 10px 50px;
+  margin: 20px 0px;
+  background-color: hsl(0, 0%, 95%);
+  border: dashed 1px cadetblue;
+  border-radius: 20px;
+}
+
+#checkmark {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url(/media/unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  top: 17px;
+  left: 11px;
+  cursor: pointer;
+}
+
+ul li.checked .text {
+  text-decoration: line-through;
+}
+
+ul li.checked #checkmark {
+  background-image: url(/media/checked.svg);
+}
+
+#crossmark {
+  padding: 3px 10px;
+  font-size: large;
+  font-weight: 800;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#crossmark:hover {
+  background-color: hsl(0, 0%, 80%);
+}
